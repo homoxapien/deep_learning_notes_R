@@ -64,4 +64,13 @@ model %>% evaluate(x_test, y_test)
 ### Save the model
 save_model_hdf5(model, 'firstNN.h5')
 ### Load the model
-model <- load_model_hdf5('firstNN.h5')
+#model <- load_model_hdf5('firstNN.h5')
+
+### Export the model in JSON or YAML
+json_string <- model_to_json(model)
+yaml_string <- model_to_yaml(model)
+
+### Import the model from JSON or YAML
+model <- model_from_json(json_string)
+model <- model_from_yaml(yaml_string)
+
