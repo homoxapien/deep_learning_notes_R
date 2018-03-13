@@ -24,12 +24,20 @@ y_test <- to_categorical(y_test, num_classes=10)
 
 ### Define the model: sequential model (building NN)
 model <- keras_model_sequential()
+# Keras objects (as 'model' here) are modified in place, no need to assign back
 model %>% 
   layer_dense(units=256, activation='relu', input_shape=c(28*28)) %>%
   layer_dropout(rate=0.4) %>%
   layer_dense(units=128, activation='relu') %>%
   layer_dropout(rate=0.3) %>%
   layer_dense(units=10, activation='softmax')
+# Or equivalently the following:
+# model <- keras_model_sequential() %>%
+#  layer_dense(units=256, activation='relu', input_shape=c(28*28)) %>%
+#  layer_dropout(rate=0.4) %>%
+#  layer_dense(units=128, activation='relu') %>%
+#  layer_dropout(rate=0.3) %>%
+#  layer_dense(units=10, activation='softmax')
 
 ### Compile the model (set NN ready for training)
 model %>% compile(
