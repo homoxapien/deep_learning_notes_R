@@ -3,3 +3,5 @@
 1. ANN
 2. CNN
 3. RNN
+
+Deep learning: GPU, Cloud, Python knowledge.
