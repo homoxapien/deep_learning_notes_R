@@ -4,4 +4,4 @@
 2. CNN
 3. RNN
 
-Deep learning: GPU, Cloud, Python knowledge.
+Deep learning Prerequisite: GPU, Cloud, Python knowledge.
