@@ -5,3 +5,5 @@
 3. RNN
 
 Deep learning Prerequisite: GPU, Cloud, Python knowledge.
+
+Basic Python: numpy, pandas
